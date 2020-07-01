@@ -1,0 +1,1 @@
+EvaluatePrequential -l trees.HoeffdingTree -s (ConceptDriftStream -s generators.SEAGenerator -d (ConceptDriftStream -s (generators.SEAGenerator -f 2) -d (ConceptDriftStream -s (generators.SEAGenerator -f 3) -d generators.SEAGenerator) -p 600000 -w 200000) -p 250000 -w 50000) -i 1000000 -f 10000

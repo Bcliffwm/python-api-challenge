@@ -1,0 +1,12 @@
+#ifndef BURRITO_H
+#define BURRITO_H
+
+class Burrito
+{
+    public:
+    Burrito();
+    double pow(double base, int power=2);
+    int total;
+};
+
+#endif // BURRITO_H

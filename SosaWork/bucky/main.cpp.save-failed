@@ -1,0 +1,13 @@
+#include <iostream>
+#include "Burrito.h"
+
+using namespace std;
+
+double pow(double, double); //prototype
+int main()
+{
+    Burrito();
+    cout<<pow(3, 2)<<endl;
+
+    return 0;
+}

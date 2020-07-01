@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1592489624 source:p:\ben's work folder\calebcurry\headerdeclarations.c
+
+1592511452 source:p:\ben's work folder\calebcurry\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+
+1592921713 source:c:\users\bocli\dev\sosawork\calebcurry\headerdeclarations.c
+
+1593015285 source:c:\users\bocli\dev\sosawork\calebcurry\main.cpp
+	<iostream>
+

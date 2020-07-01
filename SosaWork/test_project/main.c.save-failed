@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char myChar = 'i';
+    printf("My favorite character is %c", myChar);
+
+    return 0;
+}

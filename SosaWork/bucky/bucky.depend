@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1593099650 source:c:\users\bocli\dev\sosawork\bucky\burrito.cpp
+	<iostream>
+	"Burrito.h"
+
+1593099508 c:\users\bocli\dev\sosawork\bucky\burrito.h
+
+1593099508 source:c:\users\bocli\dev\sosawork\bucky\main.cpp
+	<iostream>
+	"Burrito.h"
+

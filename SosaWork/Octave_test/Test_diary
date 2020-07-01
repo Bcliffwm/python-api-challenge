@@ -1,0 +1,1940 @@
+>> a=7; cos(a), c=cosh(a)
+ans =  0.75390
+c =  548.32
+>> a=7; b=cos(a), c=cosh(a)
+b =  0.75390
+c =  548.32
+>> clc
+>> help Comman
+error: called from
+    help>do_contents at line 209 column 5
+    help at line 108 column 9
+error: help: 'Comman' not found
+>> help Command
+error: called from
+    help>do_contents at line 209 column 5
+    help at line 108 column 9
+error: help: 'Command' not found
+>> help inverse
+'inverse' is a built-in function from the file libinterp/corefcn/inv.cc
+
+ -- X = inv (A)
+ -- [X, RCOND] = inv (A)
+ -- [...] = inverse (...)
+     Compute the inverse of the square matrix A.
+
+     Return an estimate of the reciprocal condition number if requested,
+     otherwise warn of an ill-conditioned matrix if the reciprocal
+     condition number is small.
+
+     In general it is best to avoid calculating the inverse of a matrix
+     directly.  For example, it is both faster and more accurate to
+     solve systems of equations (A*x = b) with 'Y = A \ b', rather than
+     'Y = inv (A) * b'.
+
+     If called with a sparse matrix, then in general X will be a full
+     matrix requiring significantly more storage.  Avoid forming the
+     inverse of a sparse matrix if possible.
+
+     'inverse' is an alias and may be used identically in place of
+     'inv'.
+
+     See also: ldivide, rdivide, pinv.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> clc
+>> clear
+>> a=7; b=cos(a), c=cosh(a)
+b =  0.75390
+c =  548.32
+>> lookfor inverse
+cholinv             Compute the inverse of the symmetric positive definite matrix A using the C
+                    holesky factorization.
+ipermute            The inverse of the ‘permute’ function.
+ifft                Compute the inverse discrete Fourier transform of X using a Fast Fourier Tr
+                    ansform (FFT) algorithm.
+ifft2               Compute the inverse two-dimensional discrete Fourier transform of A using a
+                    Fast Fourier Transform (FFT) algorithm.
+ifftn               Compute the inverse N-dimensional discrete Fourier transform of A using a F
+                    ast Fourier Transform (FFT) algorithm.
+inv                 Compute the inverse of the square matrix A.
+acos                Compute the inverse cosine in radians for each element of X.
+acosh               Compute the inverse hyperbolic cosine for each element of X.
+asin                Compute the inverse sine in radians for each element of X.
+asinh               Compute the inverse hyperbolic sine for each element of X.
+atan                Compute the inverse tangent in radians for each element of X.
+atanh               Compute the inverse hyperbolic tangent for each element of X.
+erfinv              Compute the inverse error function.
+erfcinv             Compute the inverse complementary error function.
+pinv                Return the Moore-Penrose pseudoinverse of X.
+acosd               Compute the inverse cosine in degrees for each element of X.
+acot                Compute the inverse cotangent in radians for each element of X.
+acotd               Compute the inverse cotangent in degrees for each element of X.
+acoth               Compute the inverse hyperbolic cotangent of each element of X.
+acsc                Compute the inverse cosecant in radians for each element of X.
+acscd               Compute the inverse cosecant in degrees for each element of X.
+acsch               Compute the inverse hyperbolic cosecant of each element of X.
+asec                Compute the inverse secant in radians for each element of X.
+asecd               Compute the inverse secant in degrees for each element of X.
+asech               Compute the inverse hyperbolic secant of each element of X.
+asind               Compute the inverse sine in degrees for each element of X.
+atand               Compute the inverse tangent in degrees for each element of X.
+betaincinv          Compute the inverse of the normalized incomplete beta function.
+gammaincinv         Compute the inverse of the normalized incomplete gamma function.
+invhilb             Return the inverse of the Hilbert matrix of order N.
+discrete_inv        For each element of X, compute the quantile (the inverse of the CDF) at X o
+                    f the univariate distribution which assumes the values in V with probabilit
+                    ties P.
+empirical_inv       For each element of X, compute the quantile (the inverse of the CDF) at X o
+                    f the empirical distribution obtained from the univariate sample DATA.
+>> doc plot
+>> doc inverse
+>> a
+a =  7
+>> abs a
+ans =  97
+>> abs(a)
+ans =  7
+>> abs(-10)
+ans =  10
+>> ans
+ans =  10
+>> ~ans
+ans = 0
+>> clc
+>> x = [1 2 3 4 5 6];
+>> x
+x =
+
+   1   2   3   4   5   6
+
+>> y=[3 -1 2 4 5 1]
+y =
+
+   3  -1   2   4   5   1
+
+>> y
+y =
+
+   3  -1   2   4   5   1
+
+>> plot(x,y)
+>> x = 0:pi/100:2*pi;
+>> y=sin(x);
+>> plot(x,y)
+>> x = [1 2 3 4 5 6];
+>> x
+x =
+
+   1   2   3   4   5   6
+
+>> x(2)
+ans =  2
+>> x(1)
+ans =  1
+>> x(:3)
+parse error:
+
+  syntax error
+
+>>> x(:3)
+       ^
+
+>> x(3,:)
+error: x(3,_): but x has size 1x6
+>> x(3:)
+parse error:
+
+  syntax error
+
+>>> x(3:)
+        ^
+
+>> x(3:end)
+ans =
+
+   3   4   5   6
+
+>> b=length(x)
+b =  6
+>> help start
+error: called from
+    help>do_contents at line 209 column 5
+    help at line 108 column 9
+error: help: 'start' not found
+>> clc
+>> x
+x =
+
+   1   2   3   4   5   6
+
+>> x(1:4
+)
+ans =
+
+   1   2   3   4
+
+>> x(0:2)
+error: x(0): subscripts must be either integers 1 to (2^63)-1 or logicals
+>> x = 0:pi/100:2*pi;
+>> y=sin(x);
+>> plot(x,y)
+>> xlabel('x=0:2\pi')
+>> ylabel('Sine of x')
+>> title('Plot of the Sine function')
+>> plot(x,y)
+>> plot(x,y,'r')
+>> x = 0:pi/100:2*pi;
+>> y1=2*cos(x);
+>> y2=cos(x);
+>> y3=0.5*cos(x);
+>> plot(x,y1,'--', x, y2, '-', x, y3,':')
+>> xlabel('0 \leq x \leq 2\pi')
+>> ylabel('Cosine functions')
+>> legend('2*cos(x)', 'cos(x)', '0.5*cos(x)')
+>> title('Typical example of multiple plots')
+>> axis([0 2*pi -3 3])
+>> clc
+>> clear
+>> v = [1 4 7 10 13]
+v =
+
+    1    4    7   10   13
+
+>> w= [1;4;7;10;13]
+w =
+
+    1
+    4
+    7
+   10
+   13
+
+>> v
+v =
+
+    1    4    7   10   13
+
+>> w
+w =
+
+    1
+    4
+    7
+   10
+   13
+
+>> v'
+ans =
+
+    1
+    4
+    7
+   10
+   13
+
+>> w'
+ans =
+
+    1    4    7   10   13
+
+>> w
+w =
+
+    1
+    4
+    7
+   10
+   13
+
+>> v
+v =
+
+    1    4    7   10   13
+
+>> v(2:5)
+ans =
+
+    4    7   10   13
+
+>> w(1:4)
+ans =
+
+    1
+    4
+    7
+   10
+
+>> v(:)
+ans =
+
+    1
+    4
+    7
+   10
+   13
+
+>> v(end)
+ans =  13
+>> A = [1 2 3; 4 5 6; 7 8 9]
+A =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> A(2,1)
+ans =  4
+>> A(2,3)
+ans =  6
+>> x = 0:0.1:5;
+>> x
+x =
+
+ Columns 1 through 8:
+
+    0.00000    0.10000    0.20000    0.30000    0.40000    0.50000    0.60000    0.70000
+
+ Columns 9 through 16:
+
+    0.80000    0.90000    1.00000    1.10000    1.20000    1.30000    1.40000    1.50000
+
+ Columns 17 through 24:
+
+    1.60000    1.70000    1.80000    1.90000    2.00000    2.10000    2.20000    2.30000
+
+ Columns 25 through 32:
+
+    2.40000    2.50000    2.60000    2.70000    2.80000    2.90000    3.00000    3.10000
+
+ Columns 33 through 40:
+
+    3.20000    3.30000    3.40000    3.50000    3.60000    3.70000    3.80000    3.90000
+
+ Columns 41 through 48:
+
+    4.00000    4.10000    4.20000    4.30000    4.40000    4.50000    4.60000    4.70000
+
+ Columns 49 through 51:
+
+    4.80000    4.90000    5.00000
+
+>> clc
+>> y = linspace(a, b)
+error: 'a' undefined near line 1 column 14
+>> theta = linspace(0,2*pi, 101)
+theta =
+
+ Columns 1 through 9:
+
+   0.00000   0.06283   0.12566   0.18850   0.25133   0.31416   0.37699   0.43982   0.50265
+
+ Columns 10 through 18:
+
+   0.56549   0.62832   0.69115   0.75398   0.81681   0.87965   0.94248   1.00531   1.06814
+
+ Columns 19 through 27:
+
+   1.13097   1.19381   1.25664   1.31947   1.38230   1.44513   1.50796   1.57080   1.63363
+
+ Columns 28 through 36:
+
+   1.69646   1.75929   1.82212   1.88496   1.94779   2.01062   2.07345   2.13628   2.19911
+
+ Columns 37 through 45:
+
+   2.26195   2.32478   2.38761   2.45044   2.51327   2.57611   2.63894   2.70177   2.76460
+
+ Columns 46 through 54:
+
+   2.82743   2.89027   2.95310   3.01593   3.07876   3.14159   3.20442   3.26726   3.33009
+
+ Columns 55 through 63:
+
+   3.39292   3.45575   3.51858   3.58142   3.64425   3.70708   3.76991   3.83274   3.89557
+
+ Columns 64 through 72:
+
+   3.95841   4.02124   4.08407   4.14690   4.20973   4.27257   4.33540   4.39823   4.46106
+
+ Columns 73 through 81:
+
+   4.52389   4.58673   4.64956   4.71239   4.77522   4.83805   4.90088   4.96372   5.02655
+
+ Columns 82 through 90:
+
+   5.08938   5.15221   5.21504   5.27788   5.34071   5.40354   5.46637   5.52920   5.59203
+
+ Columns 91 through 99:
+
+   5.65487   5.71770   5.78053   5.84336   5.90619   5.96903   6.03186   6.09469   6.15752
+
+ Columns 100 and 101:
+
+   6.22035   6.28319
+
+>> clc
+>> A
+A =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> A(2:)
+parse error:
+
+  syntax error
+
+>>> A(2:)
+        ^
+
+>> A(2,:)
+ans =
+
+   4   5   6
+
+>> A(:, 2:3)
+ans =
+
+   2   3
+   5   6
+   8   9
+
+>> A(:, 1:2)
+ans =
+
+   1   2
+   4   5
+   7   8
+
+>> A(:,1:3)
+ans =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> A(:,1&3)
+ans =
+
+   1
+   4
+   7
+
+>> B=A([2 3],[1 2])
+B =
+
+   4   5
+   7   8
+
+>> C=A([1 3], [1 2])
+C =
+
+   1   2
+   7   8
+
+>> D=A([1 2], [2 3])
+D =
+
+   2   3
+   5   6
+
+>> A(:)
+ans =
+
+   1
+   4
+   7
+   2
+   5
+   8
+   3
+   6
+   9
+
+>> A
+A =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> A(end,:)
+ans =
+
+   7   8   9
+
+>> A(end:-1:1, end)
+ans =
+
+   9
+   6
+   3
+
+>> size(A)
+ans =
+
+   3   3
+
+>> [m n]=size(A)
+m =  3
+n =  3
+>> A
+A =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> B=[A 10*A; -A[1 0 0; 0 1 0; 0 0 1]]
+parse error:
+
+  syntax error
+
+>>> B=[A 10*A; -A[1 0 0; 0 1 0; 0 0 1]]
+                 ^
+
+>> B
+B =
+
+   4   5
+   7   8
+
+>> B=[A 10*A; -A[1 0 0; 0 1 0; 0 0 1]]
+parse error:
+
+  syntax error
+
+>>> B=[A 10*A; -A[1 0 0; 0 1 0; 0 0 1]]
+                 ^
+
+>> B=[A 10*A; -A [1 0 0; 0 1 0; 0 0 1]]
+B =
+
+    1    2    3   10   20   30
+    4    5    6   40   50   60
+    7    8    9   70   80   90
+   -1   -2   -3    1    0    0
+   -4   -5   -6    0    1    0
+   -7   -8   -9    0    0    1
+
+>> b(ones)
+error: 'b' undefined near line 1 column 1
+>> b=ones(3,1)
+b =
+
+   1
+   1
+   1
+
+>> c=ones(1,3)
+c =
+
+   1   1   1
+
+>> eye(3)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> c=zeros(3)
+c =
+
+   0   0   0
+   0   0   0
+   0   0   0
+
+>> D=[C zeros(2); ones(2) eye(2)]
+D =
+
+   1   2   0   0
+   7   8   0   0
+   1   1   1   0
+   1   1   0   1
+
+>> A=[1 2 3; 4 5 6; 7 8 9]
+A =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> B=[10 20 30; 40 50 60; 70 80 90]
+B =
+
+   10   20   30
+   40   50   60
+   70   80   90
+
+>> C= A*.B
+parse error:
+
+  syntax error
+
+>>> C= A*.B
+         ^
+
+>> C=A.*B
+C =
+
+    10    40    90
+   160   250   360
+   490   640   810
+
+>> A.^2
+ans =
+
+    1    4    9
+   16   25   36
+   49   64   81
+
+>> A.^3
+ans =
+
+     1     8    27
+    64   125   216
+   343   512   729
+
+>> C=A.^B
+C =
+
+   1.0000e+00   1.0486e+06   2.0589e+14
+   1.2089e+24   8.8818e+34   4.8874e+46
+   1.4350e+59   1.7668e+72   7.6177e+85
+
+>> example1
+x =
+
+  -0.50000
+   1.50000
+  -0.50000
+
+>> example1
+x =
+
+  -0.50000
+   1.50000
+  -0.50000
+
+>> wos
+error: 'wos' undefined near line 1 column 1
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x3                         72  double
+        B           3x3                         72  double
+        C           3x3                         72  double
+        D           4x4                        128  double
+        ans         3x3                         72  double
+        b           3x1                         24  double
+        c           3x3                         72  double
+        m           1x1                          8  double
+        n           1x1                          8  double
+        theta       1x101                      808  double
+        v           1x5                         40  double
+        w           5x1                         40  double
+        x           3x1                         24  double
+
+Total is 180 elements using 1440 bytes
+
+>> clear
+>> whos
+>> clc
+>> example1
+x =
+
+  -0.50000
+   1.50000
+  -0.50000
+
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x3                         72  double
+        b           3x1                         24  double
+        x           3x1                         24  double
+
+Total is 15 elements using 120 bytes
+
+>> edit example1.m
+>> example2
+>> example1
+x =
+
+  -0.50000
+   1.50000
+  -0.50000
+
+>> example2
+>> f = factorial(5)
+f =  120
+>> function f = factorial(n)
+% FACTORIAL (N) returns factorial of N
+% Compute a factorial value.
+
+f = prod(1:n);
+Next
+help function
+
+>> factorial()
+error: called from
+    print_usage at line 79 column 5
+    factorial at line 38 column 5
+error: Invalid call to factorial.  Correct usage is:
+
+ -- factorial (N)
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> factorial(1)
+ans =  1
+>> factorial(2)
+ans =  2
+>> factorial(4)
+ans =  24
+>> factorial(3)
+ans =  6
+>> factorial(100)
+ans =   9.3326e+157
+>> function C=FtoC(F)
+
+>> game1 = input('Enter the points scored in the first game')
+Enter the points scored in the first game14
+game1 =  14
+>> game2 = input('Enter the points scored in the second game')
+Enter the points scored in the second game28
+game2 =  28
+>> game 3 = input('Enter the points scored in the third game')
+error: 'game' undefined near line 1 column 1
+>> game3 = input('Enter the points scored in the third game')
+Enter the points scored in the third game35
+game3 =  35
+>> average = (game1+game2+game3)/3
+average =  25.667
+>> average*3-42
+ans =  35
+>> apples= 3
+apples =  3
+>> bananas = 12
+bananas =  12
+>> cantaloupe = 2.36
+cantaloupe =  2.3600
+>> bob_apples=24
+bob_apples =  24
+>> bob_cantaloupe = 5.26
+bob_cantaloupe =  5.2600
+>> carol_bananas = 2
+carol_bananas =  2
+>> carol_cantaloupe=3
+carol_cantaloupe =  3
+>> carol_total=2.77
+carol_total =  2.7700
+>> clc
+>> carol_total
+carol_total =  2.7700
+>> bob_total=5.26
+bob_total =  5.2600
+>> bob_cantaloupe=2
+bob_cantaloupe =  2
+>> bob_cantaloupe
+bob_cantaloupe =  2
+>> liz_total=2.36
+liz_total =  2.3600
+>> liz_apples=3
+liz_apples =  3
+>> liz_bananas=12
+liz_bananas =  12
+>> liz_fruits=liz_apples + liz_bananas + 1
+liz_fruits =  16
+>> bob_apples
+bob_apples =  24
+>> bob_apples=12
+bob_apples =  12
+>> bob_cantaloupe
+bob_cantaloupe =  2
+>> bob_total
+bob_total =  5.2600
+>> carol_total
+carol_total =  2.7700
+>> carol_bananas
+carol_bananas =  2
+>> carol_cantaloupe
+carol_cantaloupe =  3
+>> carol_fruits= carol_bananas + carol_cantaloupe
+carol_fruits =  5
+>> liz_fruits
+liz_fruits =  16
+>> bob_fruits
+error: 'bob_fruits' undefined near line 1 column 1
+>> bob_fruits = bob_apples + bob_cantaloupe
+bob_fruits =  14
+>> liz_fruits
+liz_fruits =  16
+>> carol_fruits
+carol_fruits =  5
+>> total_total = liz_total + bob_total + carol_total
+total_total =  10.390
+>> total_bananas = liz_bananas + bob_bananas
+error: 'bob_bananas' undefined near line 1 column 31
+>> bob_bananas
+error: 'bob_bananas' undefined near line 1 column 1
+>> total_bananas = liz_bananas + carol_bananas
+total_bananas =  14
+>> total_apples = liz_apples + bob_apples
+total_apples =  15
+>> total_cantaloupe= 1 + carol_cantaloupe
+total_cantaloupe =  4
+>> total_fruits = total_bananas + total_apples + total_cantaloupe
+total_fruits =  33
+>> banana_percent = total_bananas/total_fruits
+banana_percent =  0.42424
+>> bananas_cost = total_total*banana_percent
+bananas_cost =  4.4079
+>> one_banana = bananas_cost/total_bananas
+one_banana =  0.31485
+>> apple_percent = total_apples/total_total
+apple_percent =  1.4437
+>> apple_percent= total_apples/total_fruits
+apple_percent =  0.45455
+>> apple_cost = total_total*apple_percent
+apple_cost =  4.7227
+>> one_apple = apple_cost/total_apples
+one_apple =  0.31485
+>> cantaloupe_percent = total_cantaloupe/total_fruits
+cantaloupe_percent =  0.12121
+>> cantaloupe_cost = total_total*cantaloupe_percent
+cantaloupe_cost =  1.2594
+>> one_cantaloupe=cantaloupe_cost/total_cantaloupe
+one_cantaloupe =  0.31485
+>> clc
+>> one_banana
+one_banana =  0.31485
+>> one_apple
+one_apple =  0.31485
+>> one_cantaloupe
+one_cantaloupe =  0.31485
+>> function C = convert_celsius(F)
+
+>> edit convert_to_celsius.m
+>> convert_to_celsius
+parse error near line 26 of file C:\Users\bocli\dev\SosaWork\Octave_test\convert_to_celsius.m
+
+  syntax error
+
+>>> function fprintf(temps) = convert_to_celsius(temps=input('Input temperature in degrees'))
+                            ^
+
+>> edit toCelsius.m
+>> toCelsius
+parse error near line 26 of file C:\Users\bocli\dev\SosaWork\Octave_test\toCelsius.m
+
+  syntax error
+
+>>> function fprintf(C) = toCelsius (C, F)
+                        ^
+
+>> toCelsius
+parse error near line 26 of file C:\Users\bocli\dev\SosaWork\Octave_test\toCelsius.m
+
+  syntax error
+
+>>> function fprintf(C) = toCelsius (F, C)
+                        ^
+
+>> toCelsius
+warning: function name 'fprintf' does not agree with function filename 'C:\Users\bocli\dev\SosaWork\Octave_test\toCelsius.m'
+error: called from
+    toCelsius at line 26 column 20
+error: 'F' undefined near line 26 column 33
+>> toCelsius
+Input the current temperature in Farenheit:72
+F =  72
+C =  22.222
+>> toCelsius
+Input the current temperature in Farenheit:72
+F =  72
+C =  22.222
+>> toCelsius
+Input the current temperature in Farenheit:32
+F =  32
+C = 0
+>> toCelsius
+Input the current temperature in Farenheit:78
+F =  78
+C =  25.556
+>> toCelsius
+Input the current temperature in degrees Farenheit:56
+F =  56
+C =  13.333
+>> clc
+>> edit SI_conversion.m
+>> toCelsius
+Input the current temperature in degrees Farenheit:98.6
+F =  98.600
+C =  37
+>> toCelsius
+Input the current temperature in degrees Farenheit:99
+F =  99
+C =  37.222
+>> toCelsius
+Input the current temperature in degrees Farenheit:78
+F =  78
+C =  25.556
+>> SI_conversion
+height =  1.9050
+Enter your weight in lbs.:180
+weight =  81.647
+>> SI_conversion
+height =  1.9050
+Enter your weight in lbs.:180
+weight =  81.647
+>> SI_conversion
+Enter the feet of your height:6
+Enter your the inches of your height0
+height =  1.8288
+Enter your weight in pounds:185
+weight =  83.915
+>> SI_conversion
+Enter the feet of your height:5
+Enter your the inches of your height15
+height =  1.9050
+Enter your weight in pounds:180
+weight =  81.647
+>> SI_conversion
+Enter the feet of your height:5
+Enter your the inches of your height5
+height =  1.6510
+Enter your weight in pounds:150
+weight =  68.039
+>> SI_conversion
+Enter the feet of your height:6
+Enter your the inches of your height0
+height =  1.8288
+Enter your weight in pounds:180
+weight =  81.647
+>> SI_conversion
+Enter the feet of your height:5
+Enter your the inches of your height11
+height =  1.8034
+Enter your weight in pounds:216
+weight =  97.976
+>> n =5; A=eye(n)
+A =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+>> for j=2:n
+for i=1:j-1
+A(i,j)=i/j;
+A(j,i)=i/j
+end
+end
+A =
+
+   1.00000   0.50000   0.00000   0.00000   0.00000
+   0.50000   1.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   1.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.00000   0.00000
+   0.50000   1.00000   0.00000   0.00000   0.00000
+   0.33333   0.00000   1.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.00000   0.00000
+   0.50000   1.00000   0.66667   0.00000   0.00000
+   0.33333   0.66667   1.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.00000
+   0.50000   1.00000   0.66667   0.00000   0.00000
+   0.33333   0.66667   1.00000   0.00000   0.00000
+   0.25000   0.00000   0.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.00000
+   0.50000   1.00000   0.66667   0.50000   0.00000
+   0.33333   0.66667   1.00000   0.00000   0.00000
+   0.25000   0.50000   0.00000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.00000
+   0.50000   1.00000   0.66667   0.50000   0.00000
+   0.33333   0.66667   1.00000   0.75000   0.00000
+   0.25000   0.50000   0.75000   1.00000   0.00000
+   0.00000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.20000
+   0.50000   1.00000   0.66667   0.50000   0.00000
+   0.33333   0.66667   1.00000   0.75000   0.00000
+   0.25000   0.50000   0.75000   1.00000   0.00000
+   0.20000   0.00000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.20000
+   0.50000   1.00000   0.66667   0.50000   0.40000
+   0.33333   0.66667   1.00000   0.75000   0.00000
+   0.25000   0.50000   0.75000   1.00000   0.00000
+   0.20000   0.40000   0.00000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.20000
+   0.50000   1.00000   0.66667   0.50000   0.40000
+   0.33333   0.66667   1.00000   0.75000   0.60000
+   0.25000   0.50000   0.75000   1.00000   0.00000
+   0.20000   0.40000   0.60000   0.00000   1.00000
+
+A =
+
+   1.00000   0.50000   0.33333   0.25000   0.20000
+   0.50000   1.00000   0.66667   0.50000   0.40000
+   0.33333   0.66667   1.00000   0.75000   0.60000
+   0.25000   0.50000   0.75000   1.00000   0.80000
+   0.20000   0.40000   0.60000   0.80000   1.00000
+
+>> what
+M-files in directory C:\Users\bocli\dev\SosaWork\Octave_test:
+
+   SI_conversion.m   example1.m        example2.m        toCelsius.m                      
+>> pwd
+ans = C:\Users\bocli\dev\SosaWork\Octave_test
+>> dir
+.                SI_conversion.m  example1.m       toCelsius.m
+..               Test_diary       example2.m
+>> lookfor apple
+have_window_system  Return true if a window system is available (X11, Windows, or Apple OS X) a
+                    nd false otherwise.
+>> exist
+error: called from
+    print_usage at line 79 column 5
+error: Invalid call to exist.  Correct usage is:
+
+ -- C = exist (NAME)
+ -- C = exist (NAME, TYPE)
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> exist (bananas)
+error: wrong type argument 'scalar'
+error: exist: NAME must be a string
+>> clc
+>> x = 8
+x =  8
+>> x = sqrt(1=x)
+parse error:
+
+  invalid constant left hand side of assignment
+
+>>> x = sqrt(1=x)
+              ^
+
+>> x = sqrt(1+x)
+x =  3
+>> x
+x =  3
+>> 
+>> 
+>> x = sqrt(1+x)
+x =  2
+>> phi = (1+sqrt(5))/2
+phi =  1.6180
+>> format long
+>> phi = (1+sqrt(5))/2
+phi =  1.618033988749895
+>> y1=x; y2=sqrt(1+x); plot(x,y1,'-',x, y2,'-', phi, phi,'o')
+>> y1=x;
+>> y2=sqrt(1+x);
+>> plot(x,y1,'-',x, y2,'-', phi, phi,'o')
+>> x=-1:.02:4;
+>> plot(x,y1,'-',x, y2,'-', phi, phi,'o')
+>> x
+x =
+
+ Columns 1 through 4:
+
+   -1.000000000000000   -0.980000000000000   -0.960000000000000   -0.940000000000000
+
+ Columns 5 through 8:
+
+   -0.920000000000000   -0.900000000000000   -0.880000000000000   -0.860000000000000
+
+ Columns 9 through 12:
+
+   -0.840000000000000   -0.820000000000000   -0.800000000000000   -0.780000000000000
+
+ Columns 13 through 16:
+
+   -0.760000000000000   -0.740000000000000   -0.720000000000000   -0.700000000000000
+
+ Columns 17 through 20:
+
+   -0.680000000000000   -0.660000000000000   -0.640000000000000   -0.620000000000000
+
+ Columns 21 through 24:
+
+   -0.600000000000000   -0.580000000000000   -0.560000000000000   -0.540000000000000
+
+ Columns 25 through 28:
+
+   -0.520000000000000   -0.500000000000000   -0.480000000000000   -0.460000000000000
+
+ Columns 29 through 32:
+
+   -0.440000000000000   -0.420000000000000   -0.400000000000000   -0.380000000000000
+
+ Columns 33 through 36:
+
+   -0.360000000000000   -0.340000000000000   -0.320000000000000   -0.300000000000000
+
+ Columns 37 through 40:
+
+   -0.280000000000000   -0.260000000000000   -0.240000000000000   -0.220000000000000
+
+ Columns 41 through 44:
+
+   -0.200000000000000   -0.180000000000000   -0.160000000000000   -0.140000000000000
+
+ Columns 45 through 48:
+
+   -0.120000000000000   -0.100000000000000   -0.080000000000000   -0.060000000000000
+
+ Columns 49 through 52:
+
+   -0.040000000000000   -0.020000000000000    0.000000000000000    0.020000000000000
+
+ Columns 53 through 56:
+
+    0.040000000000000    0.060000000000000    0.080000000000000    0.100000000000000
+
+ Columns 57 through 60:
+
+    0.120000000000000    0.140000000000000    0.160000000000000    0.180000000000000
+
+ Columns 61 through 64:
+
+    0.200000000000000    0.220000000000000    0.240000000000000    0.260000000000000
+
+ Columns 65 through 68:
+
+    0.280000000000000    0.300000000000000    0.320000000000000    0.340000000000000
+
+ Columns 69 through 72:
+
+    0.360000000000000    0.380000000000000    0.400000000000000    0.420000000000000
+
+ Columns 73 through 76:
+
+    0.440000000000000    0.460000000000000    0.480000000000000    0.500000000000000
+
+ Columns 77 through 80:
+
+    0.520000000000000    0.540000000000000    0.560000000000000    0.580000000000000
+
+ Columns 81 through 84:
+
+    0.600000000000000    0.620000000000000    0.640000000000000    0.660000000000000
+
+ Columns 85 through 88:
+
+    0.680000000000000    0.700000000000000    0.720000000000000    0.740000000000000
+
+ Columns 89 through 92:
+
+    0.760000000000000    0.780000000000000    0.800000000000000    0.820000000000000
+
+ Columns 93 through 96:
+
+    0.840000000000000    0.860000000000000    0.880000000000000    0.900000000000000
+
+ Columns 97 through 100:
+
+    0.920000000000000    0.940000000000000    0.960000000000000    0.980000000000000
+
+ Columns 101 through 104:
+
+    1.000000000000000    1.020000000000000    1.040000000000000    1.060000000000000
+
+ Columns 105 through 108:
+
+    1.080000000000000    1.100000000000000    1.120000000000000    1.140000000000000
+
+ Columns 109 through 112:
+
+    1.160000000000000    1.180000000000000    1.200000000000000    1.220000000000000
+
+ Columns 113 through 116:
+
+    1.240000000000000    1.260000000000000    1.280000000000000    1.300000000000000
+
+ Columns 117 through 120:
+
+    1.320000000000000    1.340000000000000    1.360000000000000    1.380000000000000
+
+ Columns 121 through 124:
+
+    1.400000000000000    1.420000000000000    1.440000000000000    1.460000000000000
+
+ Columns 125 through 128:
+
+    1.480000000000000    1.500000000000000    1.520000000000000    1.540000000000000
+
+ Columns 129 through 132:
+
+    1.560000000000000    1.580000000000000    1.600000000000000    1.620000000000000
+
+ Columns 133 through 136:
+
+    1.640000000000000    1.660000000000000    1.680000000000000    1.700000000000000
+
+ Columns 137 through 140:
+
+    1.720000000000000    1.740000000000000    1.760000000000000    1.780000000000000
+
+ Columns 141 through 144:
+
+    1.800000000000000    1.820000000000000    1.840000000000000    1.860000000000000
+
+ Columns 145 through 148:
+
+    1.880000000000000    1.900000000000000    1.920000000000000    1.940000000000000
+
+ Columns 149 through 152:
+
+    1.960000000000000    1.980000000000000    2.000000000000000    2.020000000000000
+
+ Columns 153 through 156:
+
+    2.040000000000000    2.060000000000000    2.080000000000000    2.100000000000000
+
+ Columns 157 through 160:
+
+    2.120000000000000    2.140000000000000    2.160000000000000    2.180000000000000
+
+ Columns 161 through 164:
+
+    2.200000000000000    2.220000000000000    2.240000000000000    2.260000000000000
+
+ Columns 165 through 168:
+
+    2.280000000000000    2.300000000000000    2.320000000000000    2.340000000000000
+
+ Columns 169 through 172:
+
+    2.360000000000000    2.380000000000000    2.400000000000000    2.420000000000000
+
+ Columns 173 through 176:
+
+    2.440000000000000    2.460000000000000    2.480000000000000    2.500000000000000
+
+ Columns 177 through 180:
+
+    2.520000000000000    2.540000000000000    2.560000000000000    2.580000000000000
+
+ Columns 181 through 184:
+
+    2.600000000000000    2.620000000000000    2.640000000000000    2.660000000000000
+
+ Columns 185 through 188:
+
+    2.680000000000000    2.700000000000000    2.720000000000000    2.740000000000000
+
+ Columns 189 through 192:
+
+    2.760000000000000    2.780000000000000    2.800000000000000    2.820000000000000
+
+ Columns 193 through 196:
+
+    2.840000000000000    2.860000000000000    2.880000000000000    2.900000000000000
+
+ Columns 197 through 200:
+
+    2.920000000000000    2.940000000000000    2.960000000000000    2.980000000000000
+
+ Columns 201 through 204:
+
+    3.000000000000000    3.020000000000000    3.040000000000000    3.060000000000000
+
+ Columns 205 through 208:
+
+    3.080000000000000    3.100000000000000    3.120000000000000    3.140000000000000
+
+ Columns 209 through 212:
+
+    3.160000000000000    3.180000000000000    3.200000000000000    3.220000000000000
+
+ Columns 213 through 216:
+
+    3.240000000000000    3.260000000000000    3.280000000000000    3.300000000000000
+
+ Columns 217 through 220:
+
+    3.320000000000000    3.340000000000000    3.360000000000000    3.380000000000000
+
+ Columns 221 through 224:
+
+    3.400000000000000    3.420000000000000    3.440000000000000    3.460000000000000
+
+ Columns 225 through 228:
+
+    3.480000000000000    3.500000000000000    3.520000000000000    3.540000000000000
+
+ Columns 229 through 232:
+
+    3.560000000000000    3.580000000000000    3.600000000000001    3.620000000000000
+
+ Columns 233 through 236:
+
+    3.640000000000000    3.660000000000000    3.680000000000000    3.700000000000000
+
+ Columns 237 through 240:
+
+    3.720000000000000    3.740000000000000    3.760000000000000    3.780000000000000
+
+ Columns 241 through 244:
+
+    3.800000000000000    3.820000000000000    3.840000000000000    3.860000000000000
+
+ Columns 245 through 248:
+
+    3.880000000000000    3.900000000000000    3.920000000000000    3.940000000000000
+
+ Columns 249 through 251:
+
+    3.960000000000000    3.980000000000000    4.000000000000000
+
+>> clc
+>> clear
+>> x=-1:.02:4;
+>> y1=x;
+>> y2=sqrt(1+x);
+>> plot(x,y1,'-',x, y2,'-', phi, phi,'o')
+error: 'phi' undefined near line 1 column 26
+>> phi = (1+sqrt(5))/2
+phi =  1.618033988749895
+>> plot(x,y1,'-',x, y2,'-', phi, phi,'o')
+>> x = 3
+x =  3
+>> for k = 1:31
+x=sqrt(1+x)
+end
+x =  2
+x =  1.732050807568877
+x =  1.652891650281070
+x =  1.628769980777233
+x =  1.621348198499395
+x =  1.619057811969479
+x =  1.618350336598809
+x =  1.618131742658430
+x =  1.618064196086926
+x =  1.618043323303466
+x =  1.618036873283012
+x =  1.618034880119403
+x =  1.618034264198198
+x =  1.618034073868099
+x =  1.618034015052866
+x =  1.618033996877960
+x =  1.618033991261605
+x =  1.618033989526056
+x =  1.618033988989742
+x =  1.618033988824012
+x =  1.618033988772798
+x =  1.618033988756972
+x =  1.618033988752082
+x =  1.618033988750571
+x =  1.618033988750104
+x =  1.618033988749959
+x =  1.618033988749915
+x =  1.618033988749901
+x =  1.618033988749897
+x =  1.618033988749895
+x =  1.618033988749895
+>> x = 3
+x =  3
+>> while x~= sqrt(1+x)
+x=sqrt(1+x)
+end
+x =  2
+x =  1.732050807568877
+x =  1.652891650281070
+x =  1.628769980777233
+x =  1.621348198499395
+x =  1.619057811969479
+x =  1.618350336598809
+x =  1.618131742658430
+x =  1.618064196086926
+x =  1.618043323303466
+x =  1.618036873283012
+x =  1.618034880119403
+x =  1.618034264198198
+x =  1.618034073868099
+x =  1.618034015052866
+x =  1.618033996877960
+x =  1.618033991261605
+x =  1.618033989526056
+x =  1.618033988989742
+x =  1.618033988824012
+x =  1.618033988772798
+x =  1.618033988756972
+x =  1.618033988752082
+x =  1.618033988750571
+x =  1.618033988750104
+x =  1.618033988749959
+x =  1.618033988749915
+x =  1.618033988749901
+x =  1.618033988749897
+x =  1.618033988749895
+x =  1.618033988749895
+>> 43^2
+ans =  1849
+>> -3^4
+ans = -81
+>> (4^3)^2
+ans =  4096
+>> 4^(3^2)
+ans =  262144
+>> 32^-4
+ans =    9.536743164062500e-07
+>> sin(pi/3)
+ans =    8.660254037844386e-01
+>> x = 1/x-1
+x =   -3.819660112501052e-01
+>> x^4
+ans =    2.128623625220820e-02
+>> x=4
+x =  4
+>> x^4
+ans =  256
+>> 3^4
+ans =  81
+>> 1^-6
+ans =  1
+>> x=3
+x =  3
+>> x^2+x^4=1
+parse error:
+
+  invalid left hand side of assignment
+
+>>> x^2+x^4=1
+           ^
+
+>> 1 = x^2+x^4
+parse error:
+
+  invalid constant left hand side of assignment
+
+>>> 1 = x^2+x^4
+      ^
+
+>> x
+x =  3
+>> x = 1/sqrt(1+x^2)
+x =    3.162277660168379e-01
+>> x^2+x^4
+ans =    1.100000000000000e-01
+>> help why
+error: called from
+    help>do_contents at line 209 column 5
+    help at line 108 column 9
+error: help: 'why' not found
+>> why
+error: 'why' undefined near line 1 column 1
+>> help what
+'what' is a function from the file C:\Octave\OCTAVE~1.0\mingw64\share\octave\5.2.0\m\miscellaneous\what.m
+
+ -- what
+ -- what DIR
+ -- w = what (DIR)
+     List the Octave specific files in directory DIR.
+
+     If DIR is not specified then the current directory is used.
+
+     If a return argument is requested, the files found are returned in
+     the structure W.  The structure contains the following fields:
+
+     path
+          Full path to directory DIR
+
+     m
+          Cell array of m-files
+
+     mat
+          Cell array of mat files
+
+     mex
+          Cell array of mex files
+
+     oct
+          Cell array of oct files
+
+     mdl
+          Cell array of mdl files
+
+     slx
+          Cell array of slx files
+
+     p
+          Cell array of p-files
+
+     classes
+          Cell array of class directories ('@CLASSNAME/')
+
+     packages
+          Cell array of package directories ('+PKGNAME/')
+
+     Compatibility Note: Octave does not support mdl, slx, and p files;
+     nor does it support package directories.  'what' will always return
+     an empty list for these categories.
+
+     See also: which, ls, exist.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> clc
+>> help function_handle
+error: called from
+    help>do_contents at line 209 column 5
+    help at line 108 column 9
+error: help: 'function_handle' not found
+>> help @
+
+ -- @
+     Return handle to a function.
+
+     Example:
+
+          f = @plus;
+          f (2, 2)
+          =>  4
+
+     (Note: @ also finds use in creating classes.  See manual chapter
+     titled Object Oriented Programming for detailed description.)
+
+     See also: function, functions, func2str, str2func.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> x=3
+x =  3
+>> f= @(x) tan(sin(x)) - sin(tan(x))
+f =
+
+@(x) tan (sin (x)) - sin (tan (x))
+
+>> function f = fibonnacci(n)
+
+>> function f = fibonacci(n)
+% help fibonacci
+f = zeros(n,1);
+f(1)=1;
+f(2)=2;
+for k=3:n
+f(x) = f(k-1) +f(k-2); 
+end
+endfunction
+>> function f
+
+>> edit fibonacci.m
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci(12)
+error: called from
+    fibonacci at line 7 column 6
+error: 'x' undefined near line 7 column 3
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+parse error near line 35 of file C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m
+
+  'endfor' command matched by 'endfunction'
+
+>>> endfunction
+    ^
+
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> fibonacci
+parse error near line 28 of file C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m
+
+  invalid parameter list
+
+>>> function f = fibonacci(12)
+                            ^
+
+>> fibonacci
+warning: function 'fibonacci' defined within script file 'C:\Users\bocli\dev\SosaWork\Octave_test\fibonacci.m'
+error: called from
+    fibonacci at line 3 column 3
+error: 'n' undefined near line 3 column 11
+>> clc
+>> function f = fibonacci(n)
+%%help fibonacci
+f=zeros(n,1);
+f(1)=1;
+f(2)=2;
+for k = 3:n
+f(k) = f(k-1) + f(k-2);
+endfor
+endfunction
+>> fibonacci(12)
+ans =
+
+     1
+     2
+     3
+     5
+     8
+    13
+    21
+    34
+    55
+    89
+   144
+   233
+
+>> edit fibnum.m
+>> fibnum(12)
+parse error near line 33 of file C:\Users\bocli\dev\SosaWork\Octave_test\fibnum.m
+
+  'endif' command matched by 'endfor'
+
+>>>   endfor
+      ^
+
+>> fibnum(12)
+error: called from
+    fibnum at line 32 column 5
+error: value on right hand side of assignment is undefined
+>> fibnum(12)
+error: called from
+    fibnum at line 32 column 5
+error: value on right hand side of assignment is undefined
+>> fibnum(12)
+error: called from
+    fibnum at line 32 column 5
+error: value on right hand side of assignment is undefined
+>> fibnum
+error: called from
+    fibnum at line 29 column 1
+error: 'n' undefined near line 29 column 4
+>> fibnum(12)
+error: called from
+    fibnum at line 32 column 5
+error: value on right hand side of assignment is undefined
+>> fibnum(12)
+error: called from
+    fibnum at line 32 column 5
+error: value on right hand side of assignment is undefined
+>> fibonacci(12)
+ans =
+
+     1
+     2
+     3
+     5
+     8
+    13
+    21
+    34
+    55
+    89
+   144
+   233
+
+>> function f = fibnum(n) 
+if n<=1
+  f = 1;
+else
+  f = fibnum(n-1) + fibnum(n-2);
+endif
+endfunctionif n<=1
+  f = 1;
+else
+parse error:
+
+  syntax error
+
+>>> else
+       ^
+
+>>   f = fibnum(n-1) + fibnum(n-2);
+error: 'n' undefined near line 1 column 14
+>> endif
+parse error:
+
+  syntax error
+
+>>> endif
+        ^
+
+>> function f = fibnum(n)
+if n<=1
+f =1;
+else
+f = fibnum(n-1) + fibnum(n-2);
+end
+endfunction
+>> fibnum(12)
+ans =  233
+>> tic, fibnum(24), toc
+ans =  75025
+Elapsed time is 1.93866 seconds.
+>> function disp = goldfract(p)
+p='1';
+for k = 2:n
+p= ['1 + 1/('p')'];
+parse error:
+
+  syntax error
+
+>>> p= ['1 + 1/('p')'];
+                 ^
+
+>> p= ['1 + 1/(' p ')'];
+error: 'p' undefined near line 1 column 16
+>> function disp = goldfract(p)
+p='1';
+for k = 2:n
+p= ['1 + 1/(' p ')'];
+endfor
+endfunction
+>> display(p)
+error: 'p' undefined near line 1 column 9
+>> goldfract(p)
+error: 'p' undefined near line 1 column 11
+>> function disp = goldfract(p)
+p='1';
+for k = 2:n
+p= ['1 + 1/(' p ')'];
+endfor
+display(p)
+endfunction
+>> goldfract(p)
+error: 'p' undefined near line 1 column 11
+>> goldfract(
+'1')
+error: called from
+    goldfract at line 3 column 1
+error: 'n' undefined near line 3 column 11
+>> goldfract(7)
+error: called from
+    goldfract at line 3 column 1
+error: 'n' undefined near line 3 column 11
+>> goldfract(
+7)
+error: called from
+    goldfract at line 3 column 1
+error: 'n' undefined near line 3 column 11
+>> function exm = goldfract(n)
+p='1';
+for k = 2:n
+p= ['1 + 1/(' p ' )'];
+end
+display(p)
+endfunction
+>> goldfract(7)
+p = 1 + 1/(1 + 1/(1 + 1/(1 + 1/(1 + 1/(1 + 1/(1 ) ) ) ) ) )
+>> p =1;
+>> q=0;
+>> for k=2:n
+t=p;
+p=p+q;
+q=t;
+end
+error: 'n' undefined near line 1 column 9
+>> function exm = conv_fract(n)
+for k= 2:n
+p= ['1 +1/(' p ' )'];
+
+>> function exm = conv_fract(n)
+p='1';
+for k=2:n
+p= ['1 + 1/(' p ' )'];
+clc
+endfunction
+parse error:
+
+  'endfor' command matched by 'endfunction'
+
+>>> endfunction
+    ^
+
+>> clcl
+error: 'clcl' undefined near line 1 column 1
+>> clc
+>> fibonacci(12)
+ans =
+
+     1
+     2
+     3
+     5
+     8
+    13
+    21
+    34
+    55
+    89
+   144
+   233
+
+>> fibnum(12)
+ans =  233
+>> function [hcbplt1, hcbplt4]=mergeAP(m, mm, mmm, cbplt1, hcbplt1, cbplt4, hcbplt4)
+%%%%%%%%%%%%% PLT 1 %%%%%%%%%%%%%%%%%%%%%%%%%
+numpart=length(cbplt(:,1));
+for k=1:numpart
+partind(k)=isempty(cbplt1{k,m});
+hpartind(k)=isempty(hcbplt1{k, mm});
+end
+parinx=find(partind(1,:)==0);
+hparinx=find(hpartind(1,:)==0);
+nummerg=length(parinx);
+for k=1:nummerg
+if(partind(parinx)==0)&(hpartind(hparinx)==1)
+hcbplt1(hparinx,mm)=cbplt(parinx,m);
+else
+message='overlap1'
+end
+end
+%%%%%%%%%%%% PLT 4 %%%%%%%%%%%%%%%%%%%%%%%%%
+numpart=length(cbplt4(:,1));
+for k=1:numpart
+partind(k)=isempty(cbplt4{k,mmm});
+hpartind(k)=isempty(hcbplt4(k,mm});
+parse error:
+
+  syntax error
+
+>>> hpartind(k)=isempty(hcbplt4(k,mm});
+                                    ^
+
+>> function [hcbplt1, hcbplt4]=mergeAP(m, mm, mmm, cbplt1, hcbplt1, cbplt4, hcbplt4)
+numpart=length(cbplt1(:,1));
+for k=1:numpart
+partind(k)=isempty(cbplt1{k,m});
+hpartind(k)=isempty(hcbplt1{k,mm});
+end
+parinx=find(partind(1,:)==0);
+hparinx=find(hpartind(1,:)==0);
+nummerg=length(parinx);
+for k=1:nummerg
+if(partind(parinx)==0)&(hpartind(hparinx)==1)
+hcbplt1(hparinx,mm)=cbplt1(parinx,m);
+else
+message='overlap1'
+end
+end
+%%%%%%%%%%%%%% PLT4 %%%%%%%%%%%%%%%%%%%%%%%
+numpart=length(cbplt4(:,1));
+for k=1:numpart
+partind(k)=isempty(cbplt4{k,mmm});
+hpartind(k)=isempty(hcbplt4{k,mm});
+end
+parinx=find(partind(1,:)==0);
+hparinx=find(hpartind(1,:)==0);
+nummerg=length(parinx);
+for k=1:nummerg
+if (partind(parinx)==0)&(hpartind(hparinx)==1)
+hcbplt4(hparinx,mm)=cbplt4(parinx,mmm);
+else
+message='overlap4'
+end
+end
+endfunction
+>> mergeAP(0, 1, 2, 28, 56, 13, 26)
+error: called from
+    mergeAP at line 4 column 11
+error: scalar cannot be indexed with {
+>> 
